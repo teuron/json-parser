@@ -20,7 +20,7 @@ var validator = require('json-parameter-parser');
 
 Parse a json
 ```js
-var valid = validator(json, ['parameter1', 'parameter2]);
+var valid = validator(json, ['parameter1', 'parameter2']);
 ```
 It is a simple as this. Returns true if the JSON has all the given Parameters, false if not.
 
