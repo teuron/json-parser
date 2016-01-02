@@ -1,0 +1,23 @@
+{
+  "name": "json-parameter-parser",
+  "version": "0.0.0",
+  "description": "A simple JSON Validator for Browser or NodeJS.",
+  "main": "lib/json_parser.js",
+  "scripts": {
+    "test": "mocha test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/teuron/json-validator"
+  },
+  "keywords": [
+    "JSON"
+  ],
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "author": "Lukas Abfalterer",
+  "license": "MIT",
+  "version": "1.0.0"
+}
