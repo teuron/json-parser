@@ -9,13 +9,13 @@ var testingJSON = JSON.parse('{"phone_number": 123456788, "registration_date": "
 
 describe("Json Validation", function () {
 
-    it("returns true if json has right properties in first level", function () {
-        var valid = parser(testingJSON, ["phone_number", "registration_date", "name"]);
+    it("returns true if json has right properties in first level with wildcard", function () {
+        var valid = parser(testingJSON, ["phone_number", "registration_date", "name.*"]);
         expect(valid).to.equal(true);
     });
 
    it("returns true if json has all right properties", function () {
-        var valid = parser(testingJSON, ["phone_number", "name", "first", "last"]);
+        var valid = parser(testingJSON, ["phone_number", "name.first", "name.last"]);
         expect(valid).to.equal(true);
     });
 

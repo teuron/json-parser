@@ -11,19 +11,6 @@ npm install json-parameter-parser
 ```
 
 ## Usage
-  Important note: the options must be in the same order as the order in the json itself
-  Example:
-   JSON: ```
-        {
-          "phone_number": 1234,
-          "name": {
-             "first": "foo",
-             "last": "bar"
-          }
-        }
-        ```
-   Options: ``` ["phone_number", "name", "first","last"] ```
-
 
 Reference in your program:
 
@@ -33,9 +20,22 @@ var validator = require('json-parameter-parser');
 
 Parse a json
 ```js
-var valid = validator(json, ['parameter1', 'parameter2']);
+var valid = validator(json, ['parameter1', 'parameter2', 'parameter3.nested']);
 ```
-It is a simple as this. Returns true if the JSON has all the given Parameters, false if not.
+
+If you want a wildcard search in a nested json just type:
+
+```js
+var valid = validator(json, ['parameter1.*']);
+```
+
+You can also only test if one particular property is in a JSON.
+
+```js
+var valid = validator(json, ['parameter']);
+```
+
+It is as simple as this. Returns true if the JSON has all the given Parameters, false if not.
 
 ## Development
 
