@@ -1,6 +1,6 @@
 # JSON Validator
 
-Simple JSON Validator through parameters for browser and Node.js. Work in Progress.
+Simple JSON Validator through parameters for browser and Node.js.
 
 ## Installation
 
@@ -11,6 +11,19 @@ npm install json-parameter-parser
 ```
 
 ## Usage
+  Important note: the options must be in the same order as the order in the json itself
+  Example:
+   JSON: ```
+        {
+          "phone_number": 1234,
+          "name": {
+             "first": "foo",
+             "last": "bar"
+          }
+        }
+        ```
+   Options: ``` ["phone_number", "name", "first","last"] ```
+
 
 Reference in your program:
 

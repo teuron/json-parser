@@ -14,7 +14,7 @@ describe("Json Validation", function () {
         expect(valid).to.equal(true);
     });
 
-    it("returns true if json has all right properties", function () {
+   it("returns true if json has all right properties", function () {
         var valid = parser(testingJSON, ["phone_number", "name", "first", "last"]);
         expect(valid).to.equal(true);
     });
@@ -45,6 +45,10 @@ describe("Json Validation", function () {
     });
     it("returns false if json has not all arguments", function () {
         var valid = parser('{"phone_number": 12345}', ["phone_number", "name"]);
+        expect(valid).to.equal(false);
+    });
+    it("returns false if json has not all arguments nested", function () {
+        var valid = parser('{"phone_number": 12345, "name":{"first": "asdf"}', ["phone_number", "name", "first", "last"]);
         expect(valid).to.equal(false);
     });
 
