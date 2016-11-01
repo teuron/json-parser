@@ -1,6 +1,6 @@
 {
   "name": "json-parameter-parser",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A simple JSON Validator for Browser or NodeJS.",
   "main": "lib/json_parser.js",
   "scripts": {
